@@ -5,7 +5,7 @@ var buffer = new Buffer(16);
 
 app.get('/', function(request, response) {
   //response.send('Hello World2!');
-  buffer = fs.readFile('/index.html');
+  buffer = fs.readFileSync('/index.html');
   response.send(buffer);
 });
 
